@@ -29,4 +29,9 @@ export class AppController {
   deleteCrypto() {
     return this.appService.deleteCrypto()
   }
+
+  @Get()
+  getHello() {
+    return this.appService.getHello()
+  }
 }
