@@ -2,13 +2,12 @@ import { ApiProperty } from "@nestjs/swagger";
 
 
 export class CryptoDataDto {
+    @ApiProperty()
+    providerID: string;
 
     @ApiProperty()
-    readonly cartID: string;
+    providerSecret : string;
 
     @ApiProperty()
-    readonly age: number;
-
-    @ApiProperty()
-    readonly breed: string;
+    currencyObject: any;
   }

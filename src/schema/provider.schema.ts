@@ -1,12 +1,8 @@
-import { Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose, { HydratedDocument } from 'mongoose';
 
-export type providerDocument = HydratedDocument<providerSchema>
- 
-@Schema({ timestamps: true })
-export class providerSchema {
-  name: String
-  secret: String
-} 
+export type providerDocument = HydratedDocument<typeof providerSchema>
 
-export const ProviderSchema = SchemaFactory.createForClass(providerSchema);
+export const providerSchema = new mongoose.Schema({
+  name: String,
+  secret: String
+});
