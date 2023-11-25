@@ -9,14 +9,14 @@ import { ApiOperation, ApiResponse } from '@nestjs/swagger';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
+  @Get("/crypto")
   @ApiOperation({ summary: 'Get All Crypto Data.' })
 	@ApiResponse({ status: 200, description: ' All Crypto Data' })
   getCrypto() {
     return this.appService.getCrypto();
   }
 
-  @Post()
+  @Post("/crypto")
   @ApiOperation({ summary: 'Submit Crypto Data' })
   submitCrypto(
     @Body() Body: CryptoDataDto
@@ -24,7 +24,7 @@ export class AppController {
     return this.appService.postCrypto(Body);
   }
 
-  @Delete()
+  @Delete("/crypto")
   @ApiOperation({ summary: 'Delete All Crypto Data.' })
   deleteCrypto() {
     return this.appService.deleteCrypto()
