@@ -59,4 +59,4 @@ jobs:
           app-name: 'CryptoAppApi'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9CDB2F2E6FD24230BA86AB8FB43F632C }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_24176FFABB16487E85A645A7C4DB28C5 }}
